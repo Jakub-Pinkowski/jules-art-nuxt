@@ -1,13 +1,16 @@
 <template>
-    <div class="ml-4 text-2xl">
-        <h1>Photos</h1>
+    <div class="text-2xl">
+        <div class="w-full">
+            <h1>Photos</h1>
+        </div>
+
         <!-- Gallery -->
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
-            <div v-for="photo in photos" :key="photo.name">
+        <div class="columns-1 md:columns-3 gap-8">
+            <div v-for="photo in photos" :key="photo.name" class="my-8">
                 <img
                     :src="photo.src"
                     :alt="photo.name"
-                    class="w-full h-auto shadow-2xl rounded-lg transition-transform transform hover:scale-105 hover:opacity-95 cursor-pointer"
+                    class="w-full h-auto shadow-2xl rounded-lg cursor-pointer ease-out duration-500"
                 />
             </div>
         </div>
