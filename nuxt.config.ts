@@ -8,6 +8,9 @@ export default defineNuxtConfig({
         dataValue: 'theme',
         classSuffix: '',
     },
+    vite: {
+        assetsInclude: ['**/*.mov', '**/*.png', '**/*.jpg'],
+    },
     app: {
         head: {
             title: 'Jules-Art',

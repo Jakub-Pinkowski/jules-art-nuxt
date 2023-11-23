@@ -14,7 +14,7 @@ interface photoObject {
 }
 
 export const usePhotosStore = defineStore({
-    id: 'myPhotosStore',
+    id: 'PhotosStore',
     state: () => ({
         photos: [
             {
