@@ -6,7 +6,6 @@ export default defineNuxtConfig({
         head: {
             title: 'Jules-Art',
             meta: [
-                // Add other meta tags as needed
                 { charset: 'utf-8' },
                 { name: 'description', content: 'Jules Art artist portfolio' },
                 { property: 'og:title', content: 'Jules-Art' },
