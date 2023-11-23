@@ -4,6 +4,9 @@
         <button class="btn">
             Test Button
         </button>
+        <p class='text-white p-4'>
+            Test paragraph
+        </p>
     </div>
 </template>
 
