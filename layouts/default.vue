@@ -25,7 +25,7 @@
                 <p>© 2023 Jakub Pinkowski</p>
             </aside>
             <nav class="md:place-self-center md:justify-self-end">
-                <nuxt-link to="https://github.com/Jakub-Pinkowski?tab=repositories">
+                <nuxt-link to="https://github.com/Jakub-Pinkowski">
                     <img :src="github_icon" alt="GitHub Icon" />
                 </nuxt-link>
             </nav>
