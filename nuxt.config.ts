@@ -3,7 +3,7 @@ export default defineNuxtConfig({
     modules: ['@pinia/nuxt', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
     css: ['~/assets/css/main.css'],
     colorMode: {
-        preference: 'light',
+        preference: 'system',
         fallback: 'light',
         dataValue: 'theme',
         classSuffix: '',

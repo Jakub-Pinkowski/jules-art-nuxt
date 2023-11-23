@@ -5,18 +5,9 @@
                 <div>
                     <h1 class="text-2xl font-bold mx-4">My Site</h1>
                 </div>
-                <label class="swap swap-rotate">
-                    <!-- this hidden checkbox controls the state -->
-                    <input
-                        type="checkbox"
-                        :checked="colorMode.value === 'dark'"
-                        @change="toggleColorMode"
-                    />
 
-                    <SunIcon />
+                <ThemeToggle />
 
-                    <MoonIcon />
-                </label>
                 <ul class="flex m-2 py-2 px-2">
                     <li><nuxt-link to="/">Home</nuxt-link></li>
                     <li><nuxt-link to="/photos">Photos</nuxt-link></li>
@@ -35,11 +26,7 @@
 </template>
 
 <script lang="ts" setup>
-const colorMode = useColorMode()
-const toggleColorMode = () => {
-    colorMode.preference = colorMode.preference === 'dark' ? 'light' : 'dark'
-    localStorage.setItem('nuxt-color-mode', colorMode.value)
-}
+
 </script>
 
 <style scoped lang="scss"></style>
