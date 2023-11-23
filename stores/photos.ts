@@ -11,7 +11,6 @@ import photo7 from '@/assets/photos/7.jpg'
 interface photoObject {
     name: string
     src: string
-    row: number
 }
 
 export const usePhotosStore = defineStore({
@@ -21,37 +20,30 @@ export const usePhotosStore = defineStore({
             {
                 name: 'photo1',
                 src: photo1,
-                row: 1,
             },
             {
                 name: 'photo2',
                 src: photo2,
-                row: 1,
             },
             {
                 name: 'photo3',
                 src: photo3,
-                row: 2,
             },
             {
                 name: 'photo4',
                 src: photo4,
-                row: 2,
             },
             {
                 name: 'photo5',
                 src: photo5,
-                row: 2,
             },
             {
                 name: 'photo6',
                 src: photo6,
-                row: 3,
             },
             {
                 name: 'photo7',
                 src: photo7,
-                row: 3,
             },
         ] as photoObject[],
     }),
