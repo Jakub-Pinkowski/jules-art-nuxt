@@ -5,9 +5,9 @@
                 <div>
                     <h1 class="text-2xl font-bold mx-4">My Site</h1>
                 </div>
-                <h1>Color mode: {{ $colorMode.value }}</h1>
-                <h2>Color preference: {{ $colorMode.preference }}</h2>
-                <select v-model="$colorMode.preference">
+                <h1>Color mode: {{ colorMode.value }}</h1>
+                <h2>Color preference: {{ colorMode.preference }}</h2>
+                <select v-model="colorMode.preference">
                     <option v-for="theme of themes" :value="theme" :key="theme">
                         {{ theme }}
                     </option>
@@ -31,36 +31,12 @@
 
 <script lang="ts" setup>
 const colorMode = useColorMode()
+console.log(colorMode)
 const themes = [
-    'system',
     'light',
     'dark',
-    'sepia',
-    'cupcake',
-    'bumblebee',
-    'cmyk',
-    'autumn',
-    'business',
-    'acid',
-    'lemonade',
-    'night',
-    'coffee',
-    'winter',
 ]
 </script>
 
 <style scoped lang="scss">
-body {
-    background-color: #fff;
-    color: rgba(0, 0, 0, 0.8);
-}
-.dark-mode body {
-    background-color: #091a28;
-    color: #ebf4f1;
-}
-
-.sepia-mode body {
-    background-color: #f1e7d0;
-    color: #433422;
-}
 </style>
