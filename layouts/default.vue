@@ -26,8 +26,21 @@
 </template>
 
 <script lang="ts" setup>
-const colorMode = useColorMode();
-const themes = ["light", "dark"];
+import { onMounted, watch } from 'vue'
+
+const colorMode = useColorMode()
+const themes = ['light', 'dark']
+
+onMounted(() => {
+    // Watch for changes in colorMode.preference
+    watch(
+        () => colorMode.preference,
+        (newTheme) => {
+            // Perform any actions you want when the theme changes
+            console.log('Theme changed to:', newTheme)
+        }
+    )
+})
 </script>
 
 <style scoped lang="scss"></style>
