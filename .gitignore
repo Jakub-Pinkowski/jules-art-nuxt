@@ -20,6 +20,9 @@ logs
 .idea
 *.local
 *.mov
+*.jpg
+*.jpeg
+*.png
 
 /cypress/videos/
 /cypress/screenshots/
