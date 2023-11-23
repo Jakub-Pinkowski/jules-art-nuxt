@@ -2,6 +2,12 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
     modules: ['@pinia/nuxt', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
     css: ['~/assets/css/main.css'],
+    colorMode: {
+        preference: 'system',
+        fallback: 'light',
+        dataValue: 'theme',
+        classSuffix: '',
+    },
     app: {
         head: {
             title: 'Jules-Art',
@@ -13,10 +19,5 @@ export default defineNuxtConfig({
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
             ],
         },
-    },
-    colorMode: {
-        preference: 'system',
-        dataValue: 'theme',
-        classSuffix: '',
     },
 })
