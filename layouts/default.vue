@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="flex flex-col min-h-screen">
         <header>
             <nav class="navbar bg-base-100">
                 <div class="flex-1">
@@ -17,12 +17,14 @@
                 </div>
             </nav>
         </header>
-        <slot />
-        <footer class="footer items-center p-4 bg-neutral text-neutral-content">
+        <main class="flex-1">
+            <slot />
+        </main>
+        <footer class="footer items-center p-2 bg-neutral text-neutral-content">
             <aside class="items-center grid-flow-col">
                 <p>© 2023 Jakub Pinkowski</p>
             </aside>
-            <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+            <nav class=" md:place-self-center md:justify-self-end">
                 <nuxt-link to="https://github.com/Jakub-Pinkowski?tab=repositories">
                     <img :src="github_icon" alt="GitHub Icon" />
                 </nuxt-link>
