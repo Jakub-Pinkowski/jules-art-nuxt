@@ -1,6 +1,9 @@
 <template>
     <div>
         <h1>Movies</h1>
+        <button class="btn">
+            Test Button
+        </button>
     </div>
 </template>
 
