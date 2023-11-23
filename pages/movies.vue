@@ -1,13 +1,11 @@
 <template>
-    <div>
-        <div
-            v-for="movie in movies"
-            :key="movie.name"
-            class="flex flex-col items-center justify-center w-full h-auto"
-        >
-            <video :src="movie.src" :poster="movie.poster" controls class="w-full h-full"></video>
-            <h3>{{ movie.name }}</h3>
-        </div>
+    <div
+        v-for="movie in movies"
+        :key="movie.name"
+        class="flex flex-col items-center justify-center w-full h-auto"
+    >
+        <video :src="movie.src" :poster="movie.poster" controls class="w-4/5"></video>
+        <h3 class="text-2xl font-medium mt-4 mb-8">{{ movie.name }}</h3>
     </div>
 </template>
 
