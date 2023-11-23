@@ -12,6 +12,9 @@
             </nav>
         </header>
         <slot />
+        <footer>
+            <p>&copy; 2023</p>
+        </footer>
     </div>
 </template>
 
