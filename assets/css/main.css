@@ -14,6 +14,11 @@
     --secondary-font: 'Work Sans', sans-serif; */
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> c09695bdc88c44dbd1267bd5c4a581258ec18fd9
 body {
     min-height: 100vh;
     line-height: 1.6;
@@ -22,4 +27,8 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c09695bdc88c44dbd1267bd5c4a581258ec18fd9
