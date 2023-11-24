@@ -36,7 +36,6 @@
 const colorMode = useColorMode()
 const toggleColorMode = () => {
     colorMode.preference = colorMode.preference === 'dark' ? 'light' : 'dark'
-    localStorage.setItem('nuxt-color-mode', colorMode.value)
 }
 
 onMounted(() => {
