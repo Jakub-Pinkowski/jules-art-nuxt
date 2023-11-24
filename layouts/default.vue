@@ -11,7 +11,7 @@
                         <li><nuxt-link to="/">Home</nuxt-link></li>
                         <li><nuxt-link to="/photos">Photos</nuxt-link></li>
                         <li><nuxt-link to="/movies">Movies</nuxt-link></li>
-                        <li><nuxt-link to="/movies">Reels</nuxt-link></li>
+                        <li><nuxt-link to="/reels">Reels</nuxt-link></li>
                         <li><nuxt-link to="/resources">Resources</nuxt-link></li>
                     </ul>
                 </div>
