@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="mt-8">
         <!-- Gallery -->
         <div class="columns-3 gap-4 my-8 w-full h-auto">
             <div v-for="photo in photos" :key="photo.name" class="m-4">

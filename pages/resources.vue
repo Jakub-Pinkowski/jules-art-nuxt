@@ -1,6 +1,5 @@
 <template>
-    <div>
-        <h1>Resources</h1>
+    <div class="mt-8">
         <div v-for="resource in resources" class="card card-compact w-96 bg-base-100 shadow-xl">
             <figure>
                 <img :src="resource.poster" :alt="resource.name" />
@@ -42,7 +41,7 @@ const downloadFile = () => {
     // Hide the toast after 3 seconds
     setTimeout(() => {
         showToast.value = false
-    }, 1500)
+    }, 1000)
 }
 </script>
 
