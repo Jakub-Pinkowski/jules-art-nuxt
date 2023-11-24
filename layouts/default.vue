@@ -3,7 +3,6 @@
         <header>
             <DesktopNavbar class="max-md:hidden" />
 
-            <!-- Mobile -->
             <MobileNavbar class="md:hidden" />
         </header>
         <main class="flex-1 mx-6">
