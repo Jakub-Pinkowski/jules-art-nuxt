@@ -42,8 +42,15 @@ const downloadFile = () => {
     // Hide the toast after 3 seconds
     setTimeout(() => {
         showToast.value = false
-    }, 2000)
+    }, 1500)
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+</style>
