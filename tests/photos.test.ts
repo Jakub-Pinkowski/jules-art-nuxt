@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'node:url'
 import { describe, expect, it } from 'vitest'
-import { setup, $fetch, isDev, createPage } from '@nuxt/test-utils'
+import { setup, $fetch, isDev } from '@nuxt/test-utils'
 
 describe('photos', async () => {
     await setup({
@@ -8,11 +8,27 @@ describe('photos', async () => {
         server: true,
     })
 
-    const page = await createPage('/photos')
-
     it('Renders 3 columns of photos', async () => {
-        const columns = await page.findAll('.column')
-        expect(columns).toHaveLength(3)
+        expect(await $fetch('/photos')).toMatch('columns-3')
+    })
+
+    it('At least 1 photo is rendered', async () => {
+        expect(await $fetch('/photos')).toMatch('img')
+    })
+
+    it('All photos have alt text', async () => {
+        // Iterate throught all the img to make sure all of them have alt text that's not empty
+        const html = await $fetch('/photos')
+        const regex = /<img.*?alt="(.*?)"/g
+        let match
+        let count = 0
+        while ((match = regex.exec(html)) !== null) {
+            if (match[1] === '') {
+                throw new Error('Found an image without alt text')
+            }
+            count++
+        }
+        expect(count).toBeGreaterThan(0)
     })
 
     if (isDev()) {

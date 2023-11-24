@@ -8,7 +8,7 @@ describe('home', async () => {
         server: true,
     })
 
-    it('Renders Home', async () => {
+    it('Renders Home heading', async () => {
         expect(await $fetch('/')).toMatch('Home')
     })
 
