@@ -7,6 +7,12 @@ import berlin_romance_1_poster from '@/assets/movies/Berlin_Romance_1.jpg'
 import berlin_romance_2_poster from '@/assets/movies/Berlin_Romance_2.jpg'
 import jane_poster from '@/assets/movies/Jane_poster.jpg'
 
+interface movieObject {
+    name: string
+    src: string
+    poster: string
+}
+
 export const useMoviesStore = defineStore({
     id: 'moviesStore',
     state: () => ({
@@ -26,6 +32,6 @@ export const useMoviesStore = defineStore({
                 src: jane,
                 poster: jane_poster,
             },
-        ],
+        ] as movieObject[],
     }),
 })

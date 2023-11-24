@@ -14,6 +14,12 @@ import reel_4_poster from '@/assets/reels/reel_4_poster.jpg'
 import reel_5_poster from '@/assets/reels/reel_5_poster.jpg'
 import reel_6_poster from '@/assets/reels/reel_6_poster.jpg'
 
+interface reelObject {
+    name: string
+    src: string
+    poster: string
+}
+
 export const useReelsStore = defineStore({
     id: 'reelsStore',
     state: () => ({
@@ -48,6 +54,6 @@ export const useReelsStore = defineStore({
                 src: reel_6,
                 poster: reel_6_poster,
             },
-        ],
+        ] as reelObject[],
     }),
 })
