@@ -8,7 +8,7 @@ import berlin_romance_2_poster from '@/assets/movies/Berlin_Romance_2.jpg'
 import jane_poster from '@/assets/movies/Jane_poster.jpg'
 
 export const useMoviesStore = defineStore({
-    id: 'MoviesStore',
+    id: 'moviesStore',
     state: () => ({
         movies: [
             {
