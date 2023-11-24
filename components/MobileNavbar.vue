@@ -6,6 +6,7 @@
             <span></span>
             <span></span>
             <ul id="menu">
+                <ThemeToggle />
                 <nuxt-link to="/">
                     <li @click="close()">Home</li>
                 </nuxt-link>
