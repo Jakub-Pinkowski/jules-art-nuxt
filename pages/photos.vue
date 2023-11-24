@@ -18,7 +18,7 @@
 
         <!-- Modal -->
         <transition name="modal" mode="out-in" appear>
-            <div class="photo_modal" v-if="modalOpen">
+            <div class="photo-modal" v-if="modalOpen">
                 <div class="modal-background" @click="closeModal"></div>
                 <div class="modal-content" @click="closeModal">
                     <img :src="modalImage" alt="Full Size Image" />
@@ -49,7 +49,7 @@ const closeModal = () => {
 </script>
 
 <style scoped lang="scss">
-.photo_modal {
+.photo-modal {
     display: flex;
     position: fixed;
     z-index: 1;

@@ -17,7 +17,7 @@ describe('photos', async () => {
     })
 
     it('All photos have alt text', async () => {
-        // Iterate throught all the img to make sure all of them have alt text that's not empty
+        // Iterate through all the img to make sure all of them have alt text that's not empty
         const html = await $fetch('/photos')
         const regex = /<img.*?alt="(.*?)"/g
         let match
@@ -30,6 +30,12 @@ describe('photos', async () => {
         }
         expect(count).toBeGreaterThan(0)
     })
+
+    it('Modal should not be visible when page is loaded', async () => {
+        // modalOpen should be false when page is loaded
+        expect(await $fetch('/photos')).not.toMatch('modalOpen')
+    })
+
 
     if (isDev()) {
         it('[dev] ensure vite client script is added', async () => {
