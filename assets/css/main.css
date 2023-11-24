@@ -1,7 +1,8 @@
 :root {
     --primary: #c8b6ff;
     --secondary: #bbd0ff;
-     --light-bg-color: #1e1f21;
+    /* TODO: Update colors */
+    --light-bg-color: #1e1f21;
     --dark-accent: #3c096c;
     --highlight-color: #5a189a;
     --accent-color: #9d4edd;
@@ -11,7 +12,7 @@
     --light-gray: #f3f5f7;
     --white: #ffffff;
     --primary-font: 'Montserrat', sans-serif;
-    --secondary-font: 'Work Sans', sans-serif; 
+    --secondary-font: 'Work Sans', sans-serif;
 }
 
 body {
