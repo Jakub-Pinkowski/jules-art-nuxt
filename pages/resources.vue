@@ -12,7 +12,7 @@
                 </p>
                 <div class="card-actions justify-end">
                     <a :href="resource.src" download>
-                        <button class="btn btn-primary btn-outline">Download</button>
+                        <button class="btn btn-primary">Download</button>
                     </a>
                 </div>
             </div>
