@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="desktop">
-            <swiper
+            <Swiper
                 ref="mySwiper"
                 @slideChangeTransitionEnd="onSlideChangeTransitionEnd"
                 :slidesPerView="1"
@@ -22,10 +22,9 @@
                         spaceBetween: 120,
                     },
                 }"
-                :modules="modules"
                 class="mySwiper"
             >
-                <swiper-slide v-for="reel in reversedReels" :key="reel.name">
+                <SwiperSlide v-for="reel in reversedReels" :key="reel.name">
                     <video
                         class="rounded"
                         :src="reel.src"
@@ -34,10 +33,10 @@
                         controls
                     ></video>
                     <span class="video-text"> {{ reel.name }}</span>
-                </swiper-slide>
+                </SwiperSlide>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-            </swiper>
+            </Swiper>
         </div>
     </div>
 </template>
@@ -45,11 +44,6 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'
 import { useReelsStore } from '~/stores/reels'
-
-import 'swiper/css'
-import 'swiper/css/effect-coverflow'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
 
 const reelsStore = useReelsStore()
 const reels = reelsStore.reels
@@ -118,21 +112,19 @@ onMounted(() => {
             left: -24px;
             width: 100%;
             text-align: center;
-            color: var(--light-gray);
+            color: #fff;
             font-size: 1.5rem;
             font-weight: 600;
         }
     }
 
     .swiper-button-next {
-        color: var(--main-bg-color);
         height: 50px !important;
         width: 50px !important;
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234e4e50' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
     }
 
     .swiper-button-prev {
-        color: var(--main-bg-color);
         height: 50px !important;
         width: 50px !important;
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234e4e50' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
