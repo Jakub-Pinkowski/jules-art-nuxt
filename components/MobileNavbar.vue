@@ -41,7 +41,7 @@ const close = () => {
 #menuToggle {
     display: block;
     position: absolute;
-    top: 50px;
+    top: 20px;
     right: 50px;
     z-index: 10000;
     -webkit-user-select: none;

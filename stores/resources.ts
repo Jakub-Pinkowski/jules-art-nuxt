@@ -21,6 +21,13 @@ export const useResourcesStore = defineStore({
                 description:
                     'A storyboard is a graphic organizer that consists of illustrations or images displayed in sequence for the purpose of pre-visualizing a motion picture, animation, motion graphic or interactive media sequence.',
             },
+            {
+                name: 'Storyboard',
+                src: storyboard,
+                poster: storyboard_poster,
+                description:
+                    'A storyboard is a graphic organizer that consists of illustrations or images displayed in sequence for the purpose of pre-visualizing a motion picture, animation, motion graphic or interactive media sequence.',
+            },
         ] as resourceObject[],
     }),
 })

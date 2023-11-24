@@ -1,6 +1,6 @@
 <template>
-    <div class="mt-8">
-        <div v-for="resource in resources" class="card card-compact w-96 bg-base-100 shadow-xl">
+    <div class="mt-8 max-md:flex max-md:flex-col max-md:items-center">
+        <div v-for="resource in resources" class="card card-compact w-full bg-base-100 shadow-xl my-8">
             <figure>
                 <img :src="resource.poster" :alt="resource.name" />
             </figure>
