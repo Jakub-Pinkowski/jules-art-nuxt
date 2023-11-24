@@ -11,12 +11,20 @@
                     {{ resource.description }}
                 </p>
                 <div class="card-actions justify-end">
-                    <a :href="resource.src" download>
+                    <a :href="resource.src" download @click="downloadFile">
                         <button class="btn btn-primary">Download</button>
                     </a>
                 </div>
             </div>
         </div>
+
+        <transition name="fade">
+            <div v-show="showToast" class="toast toast-top toast-center top-20">
+                <div class="alert alert-success">
+                    <span>File downloaded successfully</span>
+                </div>
+            </div>
+        </transition>
     </div>
 </template>
 
@@ -25,6 +33,17 @@ import { useResourcesStore } from '~/stores/resources'
 
 const resourcesStore = useResourcesStore()
 const resources = resourcesStore.resources
+
+const showToast = ref(false)
+
+const downloadFile = () => {
+    showToast.value = true
+
+    // Hide the toast after 3 seconds
+    setTimeout(() => {
+        showToast.value = false
+    }, 2000)
+}
 </script>
 
 <style scoped lang="scss"></style>

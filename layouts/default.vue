@@ -17,7 +17,7 @@
                 </div>
             </nav>
         </header>
-        <main class="flex-1 mx-4">
+        <main class="flex-1 mx-6">
             <slot />
         </main>
         <footer class="footer items-center p-2 bg-neutral text-neutral-content">
