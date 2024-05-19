@@ -5,6 +5,7 @@
 
             <MobileNavbar class="md:hidden" />
         </header>
+        
         <main class="flex-1 mx-6">
             <slot />
         </main>
